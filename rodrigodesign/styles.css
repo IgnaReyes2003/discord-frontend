@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Estilos generales */
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    background: rgb(26,22,50);
+    background: linear-gradient(180deg, rgba(26,22,50,1) 0%, rgba(58,3,102,1) 100%);
+        font-family: "Poppins", sans-serif;
+        color: #dddddd
+}
+
+.app {
+    display: flex;
+    height: 100%;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 220px; /* Ancho ajustado para responsive */
+    background-color: #151616c0;
+    color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.server-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.server {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.new-server, a {
+    color: #dddddd;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Lista de canales */
+.channel-list {
+    background-color: #1f2022a5;
+    color: #dddddd;
+    width: 220px; /* Ancho ajustado para responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.channel {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Área principal */
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 35px;
+    padding-top: 20px;
+    background-color: #0a0a0a91;
+    overflow-y: auto;
+    justify-content: space-between;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.server-name {
+    font-size: 24px;
+    font-weight: bold;
+    color:#baa2c1;
+    text-transform: uppercase;
+}
+
+.chat-messages {
+    display: flex;
+    padding: 20px;
+    background-color: #4126550d;
+    overflow-y: auto;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b10fb130;
+    color: #dddddd;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    text-align: center;
+margin-left: 10px;
+    background: rgb(141,11,177);
+background: linear-gradient(180deg, rgba(141,11,177,1) 0%, rgba(138,20,201,1) 100%);
+    color: #dddddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.profile {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Media query para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 160px; /* Ancho ajustado para dispositivos pequeños */
+    }
+
+    .channel-list {
+        width: 160px; /* Ancho ajustado para dispositivos pequeños */
+    }
+}
