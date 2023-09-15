@@ -1,119 +1,157 @@
-html,
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Estilos generales */
 body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    background: rgb(26,22,50);
+    background: linear-gradient(180deg, rgba(26,22,50,1) 0%, rgba(58,3,102,1) 100%);
+        font-family: "Poppins", sans-serif;
+        color: #dddddd
+}
+
+.app {
+    display: flex;
     height: 100%;
 }
 
-body {
-    margin: 0;
-    background: #3a3a3a;
+/* Barra lateral */
+.sidebar {
+    width: 220px; /* Ancho ajustado para responsive */
+    background-color: #151616c0;
+    color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow-y: auto;
 }
 
-nav {
-    background: #252525;
-    float: left;
-    height: 100%;
-    width: 72px;
-
-    display: flex; /* Usar Flexbox */
-    flex-direction: column; 
-    align-items: center; 
-    gap: 15px; /* espacio vertical */
-    padding-top: 12px;
+.server-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-nav a {
-    display: block;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%; /* Makes a circle */
-    background: #36393f;
-
-    position: relative;
-
-    transition: border-radius 250ms, background 250ms;
+.server {
+    margin: 10px 0;
+    cursor: pointer;
 }
 
-nav hr {
-    display: block;
-    width: 32px;
-    height: 2px;
-    border-radius: 196px;
-    border: none; /* Removes a white border that exists by default */
-    background: #36393f;
+.new-server, a {
+    color: #dddddd;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
-nav a:hover,
-nav a.active {
-    border-radius: 25%;
-    background: #7e7e7e;
+/* Lista de canales */
+.channel-list {
+    background-color: #1f2022a5;
+    color: #dddddd;
+    width: 220px; /* Ancho ajustado para responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+    overflow-y: auto;
 }
 
-nav a::after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 8px;
-    border-radius: 200px;
-    background: white;
-
-    position: absolute;
-    right: 57px; 
-    top: 50%;
-    transform: translateY(-50%);
-
-    transition: height 250ms;
+.channel {
+    margin: 10px 0;
+    cursor: pointer;
 }
 
-nav a:hover::after {
-    height: 18px;
+/* Área principal */
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 35px;
+    padding-top: 20px;
+    background-color: #0a0a0a91;
+    overflow-y: auto;
+    justify-content: space-between;
 }
 
-nav a.active::after {
-    height: 32px;
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-nav a .tooltip {
-    font-family: sans-serif;
-    color: white;
+.server-name {
+    font-size: 24px;
     font-weight: bold;
-    font-size: 14px;
-
-    padding: 10px 12px;
-    margin-left: 10px;
-    border-radius: 8px;
-    
-    display: none;
-    width: max-content;
-    
-    background: #202225;
-    
-    position: absolute;
-    left: 60px;
-    top: 50%;
-    transform: translateY(-50%);
+    color:#baa2c1;
+    text-transform: uppercase;
 }
 
-nav a:hover .tooltip {
-    display: block;
+.chat-messages {
+    display: flex;
+    padding: 20px;
+    background-color: #4126550d;
+    overflow-y: auto;
+    flex: 1;
+    border-radius: 5px;
 }
 
-nav a .tooltip::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
+.chat-input {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
 
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b10fb130;
+    color: #dddddd;
+    outline: none;
+    font-size: 1rem;
+}
 
-    border-top:   5px solid transparent;
-    border-bottom:5px solid transparent; 
-    border-right: 5px solid #202225;
+button {
+    text-align: center;
+margin-left: 10px;
+    background: rgb(141,11,177);
+background: linear-gradient(180deg, rgba(141,11,177,1) 0%, rgba(138,20,201,1) 100%);
+    color: #dddddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px;
+}
 
-    position: absolute;
-    left: -5px;
-    top: 50%;
-    transform: translateY(-50%);
+.account {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.profile {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Media query para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 160px; /* Ancho ajustado para dispositivos pequeños */
+    }
+
+    .channel-list {
+        width: 160px; /* Ancho ajustado para dispositivos pequeños */
+    }
 }
