@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
 /* Estilos generales */
 body {
     margin: 0px;
@@ -7,10 +5,10 @@ body {
     height: 100vh;
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
-    background: rgb(26,22,50);
-    background: linear-gradient(180deg, rgba(26,22,50,1) 0%, rgba(58,3,102,1) 100%);
-        font-family: "Poppins", sans-serif;
-        color: #dddddd
+    background: rgb(26, 22, 50);
+    background: linear-gradient(180deg, rgba(26, 22, 50, 1) 0%, rgb(91, 91, 91) 100%);
+    font-family: "Poppins", sans-serif;
+    color: #dddddd;
 }
 
 .app {
@@ -42,7 +40,8 @@ body {
     cursor: pointer;
 }
 
-.new-server, a {
+.new-server,
+.profile a {
     color: #dddddd;
     text-decoration: underline;
     font-weight: 600;
@@ -87,7 +86,7 @@ body {
 .server-name {
     font-size: 24px;
     font-weight: bold;
-    color:#baa2c1;
+    color: #c6c6c6;
     text-transform: uppercase;
 }
 
@@ -112,7 +111,7 @@ input[type="text"] {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #b10fb130;
+    background-color: #aeaeae30;
     color: #dddddd;
     outline: none;
     font-size: 1rem;
@@ -120,10 +119,10 @@ input[type="text"] {
 
 button {
     text-align: center;
-margin-left: 10px;
-    background: rgb(141,11,177);
-background: linear-gradient(180deg, rgba(141,11,177,1) 0%, rgba(138,20,201,1) 100%);
-    color: #dddddd;
+    margin-left: 10px;
+    background: rgb(190, 190, 190);
+    background: linear-gradient(180deg, rgb(182, 182, 182) 0%, rgbrgb(198, 198, 198)0%);
+    color: #3d3d3d;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -138,20 +137,4 @@ background: linear-gradient(180deg, rgba(141,11,177,1) 0%, rgba(138,20,201,1) 10
     width: 100%;
     margin-left: 20px;
     margin-bottom: 15px;
-}
-
-.profile {
-    margin: 10px 0;
-    cursor: pointer;
-}
-
-/* Media query para dispositivos más pequeños */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 160px; /* Ancho ajustado para dispositivos pequeños */
-    }
-
-    .channel-list {
-        width: 160px; /* Ancho ajustado para dispositivos pequeños */
-    }
 }
