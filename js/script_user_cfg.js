@@ -1,21 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const userForm = document.getElementById('userForm');
+document.addEventListener("DOMContentLoaded", function () {
+    const changeProfileButton = document.getElementById("changeProfileButton");
+    const profileOptions = document.getElementById("profileOptions");
+    const cancelOption = document.getElementById("cancelOption");
 
-    userForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // Evita que el formulario se envíe de inmediato
+    changeProfileButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        profileOptions.style.display = "block";
+    });
 
-        // Obtener los valores del formulario
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        const email = document.getElementById('email').value;
-        const profilePicture = document.getElementById('profilePicture').value;
+    cancelOption.addEventListener("click", function () {
+        profileOptions.style.display = "none";
+    });
 
-        // Aquí puedes enviar los datos al servidor para actualizar el usuario
-
-        // Ejemplo de impresión en la consola
-        console.log('Nuevo Nombre de Usuario:', username);
-        console.log('Nueva Contraseña:', password);
-        console.log('Nuevo Correo Electrónico:', email);
-        console.log('Nueva Foto de Perfil:', profilePicture);
+    document.addEventListener("click", function (event) {
+        if (!profileOptions.contains(event.target) && event.target !== changeProfileButton) {
+            profileOptions.style.display = "none";
+        }
     });
 });
+

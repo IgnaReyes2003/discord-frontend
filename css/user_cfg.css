@@ -1,52 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    background-color: #007BFF;
+    background-color: #282828;
     color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #111;
+    height: 100%;
+    position: fixed;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #444;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Circulo donde está el perfil del usuario*/
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #444;
+    margin: 0 auto;
+    position: relative;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Autocompleta la imagen en el circulo */
+}
+
+.user-info h2 {
+    margin-top: 5px;
+}
+
+/* Inputs del usuario */
+.user-info {
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 87px;
+}
+
+.user-info input {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #282828;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.buttons button {
+    background-color: #595959; 
+    color: #fff; 
     border: none;
     padding: 10px 20px;
-    border-radius: 3px;
+    margin-right: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.buttons button:hover {
+    background-color: #393939;
+}
+
+/* Opciones del perfil */
+.options {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #444; 
+    border: 1px solid #666; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+}
+
+.options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center; 
+    border: none;
+    background-color: #595959; 
+    color: #fff; 
+    cursor: pointer;
+    border-radius: 0; 
+    transition: background-color 0.3s; 
+}
+
+.options button:hover {
+    background-color: #393939; 
+}
+
+.options button:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+#changeProfileButton {
+    background-color: #595959; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+#changeProfileButton:hover {
+    background-color: #393939; 
 }

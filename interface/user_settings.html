@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/user_cfg.css">
-    <title>Modificar Usuario</title>
+    <title>Mi Cuenta</title>
+    <link rel="stylesheet" type="text/css" href="/css/user_cfg.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Modificar Usuario</h1>
-        <form id="userForm">
-            <div class="form-group">
-                <label for="username">Nuevo Nombre de Usuario:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Nueva Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Nuevo Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="profilePicture">Cambiar Foto de Perfil:</label>
-                <input type="file" id="profilePicture" name="profilePicture">
-            </div>
-            <div class="form-group">
-                <button type="submit">Guardar Cambios</button>
-            </div>
-        </form>
+    <div class="sidebar">
+        <a href="#">Mi Cuenta</a>
+        <a href="#">Preferencias</a>
+        <!-- Aquí añadiré otras secciones de ser necesario -->
     </div>
+    <div class="content">
+        <h1>Mi Cuenta</h1>
+        <div class="profile-picture" id="profilePicture">
+            <img src="/img/default_profile.png" alt="">
+            <button id="changeProfileButton">Cambiar foto del perfil</button>
+            <!-- Div para opciones ocultas -->
+            <div id="profileOptions" class="options">
+                <ul>
+                    <button id="uploadPhoto">Subir foto de perfil</button>
+                    <button id="deletePhoto">Eliminar foto actual</button>
+                    <button id="cancelOption">Cancelar</button>
+                </ul>
+            </div>
+        </div>
+
+        <div class="user-info">
+            <h2>Editar Información</h2>
+            <input type="text" placeholder="Nombre de usuario">
+            <input type="email" placeholder="Correo electrónico">
+            <input type="password" placeholder="Contraseña">
+        </div>
+        <div class="buttons">
+            <button id="guardarButton">Guardar</button>
+            <button id="cancelarButton">Cancelar</button>
+        </div>
+    </div>
+    
     <script src="/js/script_user_cfg.js"></script>
 </body>
 </html>
