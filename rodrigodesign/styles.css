@@ -1,140 +1,226 @@
 /* Estilos generales */
 body {
-    margin: 0px;
-    padding: 0px;
-    height: 100vh;
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-    background: rgb(26, 22, 50);
-    background: linear-gradient(180deg, rgba(26, 22, 50, 1) 0%, rgb(91, 91, 91) 100%);
-    font-family: "Poppins", sans-serif;
-    color: #dddddd;
+	margin: 0px;
+	padding: 0px;
+	height: 100vh;
+	font-size: 1rem;
+	font-family: 'Poppins', sans-serif;
+	background: rgb(26, 22, 50);
+	background: linear-gradient(
+		180deg,
+		rgb(42, 29, 39) 0%,
+		rgb(18, 13, 18) 100%
+	);
+	font-family: 'Poppins', sans-serif;
+	color: #dddddd;
 }
 
 .app {
-    display: flex;
-    height: 100%;
+	display: flex;
+	height: 100%;
 }
 
-/* Barra lateral */
-.sidebar {
-    width: 220px; /* Ancho ajustado para responsive */
-    background-color: #151616c0;
-    color: #dddddd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    overflow-y: auto;
+.ribbon {
+	display: flex;
+	flex-direction: column;
+    background-color: #000000a3;
 }
 
-.server-list {
+.ribbon i {
+	padding: 35px;
+    color:#9f9f9f;
+}
+
+.ribbon i:first-child {
     margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
 }
 
-.server {
-    margin: 10px 0;
+.ribbon i:hover {
+	color: rgb(188, 106, 229);
     cursor: pointer;
 }
 
+
+
+
+/* Barra lateral */
+.sidebar {
+	width: 220px; /* Ancho ajustado para responsive */
+	background-color: #151616c0;
+	color: #dddddd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	overflow-y: auto;
+}
+
+.server-list {
+    color:#9f9f9f;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+    margin-right: 15px;
+}
+
+
+/* Estilos para los elementos .server */
+.server {
+    padding: 8px 10px; /* Ajusta el espaciado alrededor del texto */
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.1s, color 0.1s; /* Transición suave */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    width: 100%;
+}
+
+/* Estilos al hacer hover en los elementos .server */
+.server:hover {
+    color:rgb(241, 241, 241);
+    background-color: rgba(47, 47, 47, 0.397);
+    width: 100%;
+}
+
+
+
 .new-server,
 .profile a {
-    color: #dddddd;
-    text-decoration: underline;
-    font-weight: 600;
+	color: #dddddd;
+	text-decoration: underline;
+	font-weight: 600;
 }
 
 /* Lista de canales */
 .channel-list {
-    background-color: #1f2022a5;
-    color: #dddddd;
-    width: 220px; /* Ancho ajustado para responsive */
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 20px;
-    overflow-y: auto;
+	background-color: #1f2022a5;
+	color: #dddddd;
+	width: 220px; /* Ancho ajustado para responsive */
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	padding: 20px;
+	overflow-y: auto;
+    padding-right: 35px;
 }
 
 .channel {
-    margin: 10px 0;
+    padding: 8px 10px; /* Ajusta el espaciado alrededor del texto */
+    margin: 5px 0;
     cursor: pointer;
+    transition: background-color 0.1s, color 0.1s; /* Transición suave */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    width: 100%;
+    color: #9f9f9f;
+}
+
+.channel:hover {
+    color: rgb(241, 241, 241);
+    background-color: rgba(47, 47, 47, 0.397);
+    width: 100%;
+}
+
+.channel > * {
+	margin-right: 5px;
+}
+
+.server > * {
+	margin-right: 5px;
 }
 
 /* Área principal */
 .main {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 35px;
-    padding-top: 20px;
-    background-color: #0a0a0a91;
-    overflow-y: auto;
-    justify-content: space-between;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 35px;
+	padding-top: 20px;
+	background-color: #0a0a0a91;
+	overflow-y: auto;
+	justify-content: space-between;
 }
 
 .chat-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .server-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #c6c6c6;
-    text-transform: uppercase;
+	display: flex;
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: #c6c6c6;
+}
+
+.server-title {
+	color: rgb(192, 192, 192); /* Cambiar el color del título del servidor a blanco */
+	margin-right: 5px; /* Agregar margen derecho para separación */
+}
+
+.channel-title {
+	color: #959595; /* Cambiar el color del título del canal a gris claro */
+}
+
+.separator {
+	margin: 0 10px;
 }
 
 .chat-messages {
-    display: flex;
-    padding: 20px;
-    background-color: #4126550d;
-    overflow-y: auto;
-    flex: 1;
-    border-radius: 5px;
+	display: flex;
+	padding: 20px;
+	background-color: #4126550d;
+	overflow-y: auto;
+	flex: 1;
+	border-radius: 5px;
 }
 
 .chat-input {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	flex-wrap: wrap;
 }
 
-input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #aeaeae30;
-    color: #dddddd;
-    outline: none;
-    font-size: 1rem;
+input[type='text'] {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #aeaeae30;
+	color: #dddddd;
+	outline: none;
+	font-size: 1rem;
 }
 
 button {
-    text-align: center;
-    margin-left: 10px;
-    background: rgb(190, 190, 190);
-    background: linear-gradient(180deg, rgb(182, 182, 182) 0%, rgbrgb(198, 198, 198)0%);
-    color: #3d3d3d;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 10px;
+	text-align: center;
+	margin-left: 10px;
+	background: rgb(190, 190, 190);
+	background: linear-gradient(
+		180deg,
+		rgb(182, 182, 182) 0%,
+		rgbrgb(198, 198, 198) 0%
+	);
+	color: #3d3d3d;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 10px;
+}
+
+button:hover {
+    background-color: rgb(188, 106, 229);
+    color:rgb(241, 241, 241)
 }
 
 .account {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 20px;
-    margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-left: 20px;
+	margin-bottom: 15px;
 }

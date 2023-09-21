@@ -3,61 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar cuenta</title>
+    <title>Crear Nuevo Servidor</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="credentials.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="register-container">
-        <h2>Editar cuenta</h2>
-        <form class="register-form">
-            <div class="form-group">
-                <label for="firstName">Nombre</label>
-                <input type="text" id="firstName" name="firstName" required>
+    <div class="app">
+        <div class="ribbon">
+            <a href="main.html"><i class="fas fa-fw fa-igloo fa-xl"></i></a>
+            <a href="edit.html"><i class="fas fa-fw fa-user fa-xl"></i></a>
+            <a href="searchserver.html"><i class="fas fa-fw fa-search fa-xl"></i></a>
+            <a href="newserver.html"><i class="fas fa-fw fa-add fa-xl"></i></a>
+        </div>
+        
+        <div class="main">
+            <div class="register-container">
+                <h2>Editar cuenta</h2>
+                <form class="register-form">
+                    <div class="form-group">
+                        <label for="firstName">Nombre</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailRegister">Correo electrónico</label>
+                        <input type="email" id="emailRegister" name="emailRegister" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Nombre de usuario</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="previousPassword">Contraseña actual</label>
+                        <input type="password" id="previousPassword" name="previousPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordRegister">Nueva Contraseña</label>
+                        <input type="password" id="passwordRegister" name="passwordRegister" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar Nueva Contraseña</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profilePicture">Foto de Perfil</label>
+                        <input type="file" id="profilePicture" name="profilePicture">
+                    </div>
+                    <button type="submit">Guardar cambios</button>
+                </form>
+                <p>¿Deseas salir? <a href="/login.html">Cerrar sesión</a></p>
             </div>
-            <div class="form-group">
-                <label for="lastName">Apellido</label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div class="form-group">
-                <label for="emailRegister">Correo electrónico</label>
-                <input type="email" id="emailRegister" name="emailRegister" required>
-            </div>
-            <div class="form-group">
-                <label for="username">Nombre de usuario</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="birthDate">Fecha de nacimiento</label>
-                <div class="birthdate">
-                    <select id="birthDay" name="birthDay" required>
-                        <option value="" disabled selected>Día</option>
-                        <!-- Puedes agregar opciones de día aquí -->
-                    </select>
-                    <select id="birthMonth" name="birthMonth" required>
-                        <option value="" disabled selected>Mes</option>
-                        <!-- Puedes agregar opciones de mes aquí -->
-                    </select>
-                    <select id="birthYear" name="birthYear" required>
-                        <option value="" disabled selected>Año</option>
-                        <!-- Puedes agregar opciones de año aquí -->
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="passwordRegister">Nueva Contraseña</label>
-                <input type="password" id="passwordRegister" name="passwordRegister" required>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirmar Nueva Contraseña</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            </div>
-            <div class="form-group">
-                <label for="profilePicture">Foto de Perfil</label>
-                <input type="file" id="profilePicture" name="profilePicture">
-            </div>
-            <button type="submit">Guardar cambios</button>
-        </form>
-        <p>¿Deseas salir? <a href="/login.html">Cerrar sesión</a></p>
+        </div>
     </div>
 </body>
 </html>

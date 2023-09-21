@@ -5,39 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="app">
+        <div class="ribbon">
+            <a href="main.html"><i class="fas fa-fw fa-igloo fa-xl"></i></a>
+            <a href="edit.html"><i class="fas fa-fw fa-user fa-xl"></i></a>
+            <a href="searchserver.html"><i class="fas fa-fw fa-search fa-xl"></i></a>
+            <a href="newserver.html"><i class="fas fa-fw fa-add fa-xl"></i></a>
+        </div>
+        
         <div class="sidebar">
             <div class="server-list">
-                <div class="server">Literatura Fantástica</div>
-                <div class="server">Locura Cinematográfica</div>
-                <div class="server">Relatos de viaje</div>
-                <div class="server">Salud y Bienestar</div>
-                <div class="server">Central de Juegos</div>
-                <div class="server">Fánaticos del Deporte</div>
-                <div class="server">Caos Musical</div>
-                <div class="server new-server">Nuevo Servidor</div>
-            </div>
-            <div class="account">
-                <div class="profile"><a href="edit.html">Mi cuenta</a></div>
+                <div class="server"><i class="fas fa-fw fa-comments"></i> Literatura Fantástica</div>
+                <div class="server"><i class="fas fa-fw fa-film"></i> Locura Cinematográfica</div>
+                <div class="server"><i class="fas fa-fw fa-globe"></i> Relatos de viaje</div>
+                <div class="server"><i class="fas fa-fw fa-heart"></i> Salud y Bienestar</div>
+                <div class="server"><i class="fas fa-fw fa-gamepad"></i> Central de Juegos</div>
+                <div class="server"><i class="fas fa-fw fa-futbol"></i> Fánaticos del Deporte</div>
+                <div class="server"><i class="fas fa-fw fa-music"></i> Caos Musical</div>
             </div>
         </div>
         <div class="channel-list">
-            <div class="channel">El laberinto borgeano</div>
-            <div class="channel">Todos los fuegos son Cortázar</div>
-            <div class="channel">Villa César Aira</div>
-            <!-- Puedes agregar más canales aquí -->
+            <div class="channel"><i class="fas fa-fw fa-hashtag"></i> El laberinto borgeano</div>
+            <div class="channel"><i class="fas fa-fw fa-hashtag"></i> Todos los fuegos son Cortázar</div>
+            <div class="channel"><i class="fas fa-fw fa-hashtag"></i> Villa César Aira</div>
+            <!-- Puedes asignar iconos diferentes a cada canal aquí -->
         </div>
         <div class="main">
             <div class="chat-header">
-                <div class="server-name">Todos los fuegos son Cortázar</div>
+                <div class="server-name">
+                    <div class="server-title">Literatura Fantástica</div>
+                    <div class="separator">|</div> <!-- Barra vertical como separador -->
+                    <div class="channel-title">Todos los fuegos son Cortázar</div>
+                </div>
             </div>
             <div class="chat-messages">
                 <!-- Aquí irían los mensajes -->
             </div>
             <div class="chat-input">
-                <input type="text" placeholder="Escribe un mensaje">
+                <input type="text" placeholder="Escribe un mensaje" id="message">
                 <button>Enviar</button>
             </div>
         </div>
