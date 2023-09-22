@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Cuenta</title>
     <link rel="stylesheet" type="text/css" href="/css/user_cfg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="sidebar">
         <a href="#">Mi Cuenta</a>
         <a href="#">Preferencias</a>
+        <a href="#">Acerca de</a>
         <!-- Aquí añadiré otras secciones de ser necesario -->
     </div>
     <div class="content">
         <h1>Mi Cuenta</h1>
-        <div class="profile-picture" id="profilePicture">
-            <img src="/img/default_profile.png" alt="">
-            <button id="changeProfileButton">Cambiar foto del perfil</button>
-            <!-- Div para opciones ocultas -->
-            <div id="profileOptions" class="options">
-                <ul>
-                    <button id="uploadPhoto">Subir foto de perfil</button>
-                    <button id="deletePhoto">Eliminar foto actual</button>
-                    <button id="cancelOption">Cancelar</button>
-                </ul>
-            </div>
+        <div class="profile-pic">
+            <label class="-label" for="file">
+                <span class="fa-solid fa-image"></span>
+                <span>Cambiar</span>
+            </label>
+                <input id="file" type="file" onchange="loadFile(event)"/>
+                <img src="/img/default_profile.png" id="output" width="200"/>
         </div>
 
         <div class="user-info">

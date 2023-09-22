@@ -14,6 +14,7 @@ body {
     background-color: #111;
     height: 100%;
     position: fixed;
+    transition: width 0.3s ease;
 }
 
 .sidebar a {
@@ -21,32 +22,21 @@ body {
     text-decoration: none;
     color: #fff;
     display: block;
+    transition: background-color 0.3s ease;
 }
 
+/* Estilos de la barra lateral*/
+
 .sidebar a:hover {
+    background-color: #3c3b3b;
+}
+.sidebar a.active {
     background-color: #444;
 }
 
 .content {
     margin-left: 250px;
     padding: 20px;
-}
-
-/* Circulo donde está el perfil del usuario*/
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #444;
-    margin: 0 auto;
-    position: relative;
-}
-
-.profile-picture img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover; /* Autocompleta la imagen en el circulo */
 }
 
 .user-info h2 {
@@ -56,14 +46,15 @@ body {
 /* Inputs del usuario */
 .user-info {
     background-color: #444;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 87px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .user-info input {
     width: 94%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 10px;
     border: none;
     background-color: #282828;
@@ -84,57 +75,53 @@ body {
     margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .buttons button:hover {
     background-color: #393939;
 }
 
-/* Opciones del perfil */
-.options {
+/* Estilo para la opción de cambiar imagen*/
+.profile-pic {
+    color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.profile-pic input {
     display: none;
+}
+.profile-pic img {
     position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: #444; 
-    border: 1px solid #666; 
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    z-index: 1;
+    object-fit: cover;
+    width: 165px;
+    height: 165px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, .35);
+    border-radius: 100px;
+    z-index: 0;
 }
-
-.options button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: center; 
-    border: none;
-    background-color: #595959; 
-    color: #fff; 
+.profile-pic .-label {
     cursor: pointer;
-    border-radius: 0; 
-    transition: background-color 0.3s; 
+    height: 165px;
+    width: 165px;
 }
-
-.options button:hover {
-    background-color: #393939; 
+.profile-pic:hover .-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 10000;
+    color: #fafafa;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 100px;
+    margin-bottom: 0;
 }
-
-.options button:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-#changeProfileButton {
-    background-color: #595959; 
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px; 
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s; 
-}
-
-#changeProfileButton:hover {
-    background-color: #393939; 
+.profile-pic span {
+    display: inline-flex;
+    padding: 0.2em;
+    height: 2em;
 }

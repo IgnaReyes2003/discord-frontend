@@ -1,21 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const changeProfileButton = document.getElementById("changeProfileButton");
-    const profileOptions = document.getElementById("profileOptions");
-    const cancelOption = document.getElementById("cancelOption");
+var loadFile = function (event) {
+    var image = document.getElementById("output");
+    image.src = URL.createObjectURL(event.target.files[0]);
+};
 
-    changeProfileButton.addEventListener("click", function (event) {
-        event.stopPropagation();
-        profileOptions.style.display = "block";
-    });
+/* Selección de elementos de la barra lateral (sidebar) */
+const sidebarLinks = document.querySelectorAll('.sidebar a');
 
-    cancelOption.addEventListener("click", function () {
-        profileOptions.style.display = "none";
-    });
-
-    document.addEventListener("click", function (event) {
-        if (!profileOptions.contains(event.target) && event.target !== changeProfileButton) {
-            profileOptions.style.display = "none";
-        }
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        sidebarLinks.forEach(item => item.classList.remove('active'));
+        
+        this.classList.add('active');
     });
 });
-
