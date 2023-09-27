@@ -169,6 +169,7 @@ body {
 
 .chat-messages {
 	display: flex;
+	flex-direction: column;
 	padding: 20px;
 	background-color: #4126550d;
 	overflow-y: auto;
@@ -223,4 +224,33 @@ button:hover {
 	width: 100%;
 	margin-left: 20px;
 	margin-bottom: 15px;
+}
+
+/* Estilos para los mensajes */
+.message {
+    display: flex;
+    margin-bottom: 20px;
+	border: 1px solid red;
+}
+
+/* Estilos para la foto de perfil circular */
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-right: 10px;
+}
+
+/* Estilos para la fecha y hora */
+.timestamp {
+    font-size: 0.8rem;
+    color: #9f9f9f;
+}
+
+/* Estilos para el mensaje de texto */
+.message-text {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
 }
