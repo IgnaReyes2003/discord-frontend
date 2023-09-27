@@ -9,34 +9,55 @@
 </head>
 <body>
     <div class="sidebar">
-        <a href="#">Mi Cuenta</a>
-        <a href="#">Preferencias</a>
-        <a href="#">Acerca de</a>
+        <a href="#" class="active" data-section="miCuentaSection">Mi Cuenta</a>
+        <a href="#" data-section="preferenciasSection">Preferencias</a>
+        <a href="#" data-section="acercaDeSection">Acerca de</a>
         <!-- Aquí añadiré otras secciones de ser necesario -->
     </div>
     <div class="content">
-        <h1>Mi Cuenta</h1>
-        <div class="profile-pic">
-            <label class="-label" for="file">
-                <span class="fa-solid fa-image"></span>
-                <span>Cambiar</span>
-            </label>
+        <div class="section" id="miCuentaSection">
+            <h1>Mi Cuenta</h1>
+            <div class="profile-pic">
+                <label class="-label" for="file">
+                    <span class="fa-solid fa-image"></span>
+                    <span>Cambiar</span>
+                </label>
                 <input id="file" type="file" onchange="loadFile(event)"/>
                 <img src="/img/default_profile.png" id="output" width="200"/>
+            </div>
+            <div class="user-info">
+                <h2>Editar Información</h2>
+                <input type="text" placeholder="Nombre de usuario">
+                <input type="email" placeholder="Correo electrónico">
+                <input type="password" placeholder="Contraseña">
+                <p>¿Deseas borrar tu cuenta? <a href="#" class="signup-link">Eliminar Cuenta</a></p>
+            </div>
+            <div class="buttons">
+                <button id="guardarButton">Guardar</button>
+                <button id="cancelarButton">Cancelar</button>
+            </div>
         </div>
-
-        <div class="user-info">
-            <h2>Editar Información</h2>
-            <input type="text" placeholder="Nombre de usuario">
-            <input type="email" placeholder="Correo electrónico">
-            <input type="password" placeholder="Contraseña">
-        </div>
-        <div class="buttons">
-            <button id="guardarButton">Guardar</button>
-            <button id="cancelarButton">Cancelar</button>
+        <div class="section" id="acercaDeSection" style="display: none;">
+            <div id="card">
+                <div id="avatar"></div>
+                <div id="profile">
+                    <h1>Ignacio Reyes</h1>
+                    <h3>Web Developer</h3>
+                </div>
+            </div>
         </div>
     </div>
-    
+    <!--Modal o caja para que el usuario pueda eliminar su cuenta-->
+    <div id="modal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <h2>Eliminar Cuenta</h2>
+            <p>Realizar esta acción borrará toda tu información de la base de datos, incluyendo tus mensajes. Esto no se puede deshacer.</p>
+            <p class="confirmation-text">Para confirmar esto, escribe ELIMINAR</p>
+            <input type="text" id="confirmInput" placeholder="ELIMINAR">
+            <button id="eliminarButton">Eliminar Cuenta</button>
+        </div>
+    </div>
     <script src="/js/script_user_cfg.js"></script>
 </body>
 </html>

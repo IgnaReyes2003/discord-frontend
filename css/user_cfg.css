@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #282828;
@@ -34,6 +34,10 @@ body {
     background-color: #444;
 }
 
+.content h1 {
+    margin-top: -8px;
+}
+
 .content {
     margin-left: 250px;
     padding: 20px;
@@ -60,6 +64,92 @@ body {
     background-color: #282828;
     color: #fff;
     border-radius: 10px;
+}
+
+/*Opción para que el usuario elimine su cuenta*/
+.user-info p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.user-info p a.signup-link {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.user-info p a.signup-link:hover {
+    text-decoration: underline; 
+}
+
+/* Caja para eliminación de cuenta */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #444;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    color: #fff;
+}
+
+.modal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.confirmation-text {
+    opacity: 0.7;
+}
+
+#confirmInput {
+    width: 94%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#eliminarButton {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#eliminarButton:hover {
+    background-color: #ff4d4d;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .buttons {
@@ -125,3 +215,10 @@ body {
     padding: 0.2em;
     height: 2em;
 }
+
+/**/
+.sidebar a.active {
+    background-color: #444;
+}
+
+/*Acerca de*/
