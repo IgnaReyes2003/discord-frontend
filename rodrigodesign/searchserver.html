@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Servidor</title>
+    <title>Main</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="credentials.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="app">
@@ -17,16 +17,35 @@
             <a href="newserver.html"><i class="fas fa-fw fa-add fa-xl"></i></a>
         </div>
         
+        <div class="sidebar">
+            <div class="server-list">
+                <div class="server"><i class="fas fa-fw fa-comments"></i> Literatura Fantástica<button class="join-button">Unirse</button></div> 
+                <div class="server"><i class="fas fa-fw fa-film"></i> Locura Cinematográfica<button class="join-button">Unirse</button></div>
+               
+            </div>
+        </div>
+        <div class="channel-list">
+            <div class="channel"><i class="fas fa-fw fa-hashtag"></i> El laberinto borgeano</div>
+            <div class="channel"><i class="fas fa-fw fa-hashtag"></i> Todos los fuegos son Cortázar</div>
+            <div class="channel"><i class="fas fa-fw fa-hashtag"></i> Villa César Aira</div>
+            <!-- Puedes asignar iconos diferentes a cada canal aquí -->
+        </div>
         <div class="main">
-            <div class="register-container">
-                <h2>Buscar Servidor</h2>
-                <form class="register-form">
-                    <div class="form-group">
-                        <label for="search-server">Buscar Servidor:</label>
-                        <input type="text" id="search-server" name="search-server" placeholder="Introduce el título del servidor">
-                    </div>
-                    <button type="submit">Buscar</button>
-                </form>
+            <div class="chat-header">
+                <div class="server-name">
+                    <div class="server-title">Literatura Fantástica</div>
+                    <div class="separator">|</div> <!-- Barra vertical como separador -->
+                    <div class="channel-title">Todos los fuegos son Cortázar</div>
+                </div>
+            </div>
+            <div class="chat-messages">
+                    <!-- Ejemplo de un mensaje -->
+
+
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Escribe un mensaje" id="message">
+                <button>Enviar</button>
             </div>
         </div>
     </div>

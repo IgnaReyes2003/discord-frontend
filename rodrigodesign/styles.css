@@ -45,7 +45,7 @@ body {
 
 /* Barra lateral */
 .sidebar {
-	width: 220px; /* Ancho ajustado para responsive */
+	
 	background-color: #151616c0;
 	color: #dddddd;
 	display: flex;
@@ -230,7 +230,7 @@ button:hover {
 .message {
     display: flex;
     margin-bottom: 20px;
-	border: 1px solid red;
+
 }
 
 /* Estilos para la foto de perfil circular */
@@ -253,4 +253,49 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     color: #333;
+}
+
+/* Estilos para los elementos .server */
+.server {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.1s, color 0.1s;
+    border-radius: 10px;
+    width: 100%;
+    color: #9f9f9f;
+}
+
+.server :last-child {
+	align-self: flex-end;
+}
+
+/* Estilos para el icono */
+.server i {
+    margin-right: 10px;
+}
+
+/* Estilos para el nombre del servidor */
+.server-name {
+    flex-grow: 1;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Estilos para el botón "Unirse" */
+.join-button {
+	align-self: flex-end;
+    color: #ffffff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.2s;
+}
+
+/* Estilos al hacer hover en el botón "Unirse" */
+.join-button:hover {
+    background-color: rgb(188, 106, 229);
 }
