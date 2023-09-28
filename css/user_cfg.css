@@ -251,8 +251,8 @@ input[type="file"] {
     background: url(/img/esteban_background.png);
     background-size:cover;
     background-position:center center;
-    position:relative;
-    top:10px; left:350px; right:0; bottom:0;
+    position:absolute;
+    top:70px; left:950px; right:0; bottom:0;
     margin:auto;
     box-shadow: 
     0px 30px 30px -20px rgba(0,0,0,1), 
@@ -333,8 +333,8 @@ input[type="file"] {
     background: url(/img/ignacio_background.jpg);
     background-size:cover;
     background-position:center center;
-    position:relative;
-    top:-525px; left:0px; right:0; bottom:0;
+    position:absolute;
+    top:70px; left:250px; right:0; bottom:0;
     margin:auto;
     box-shadow: 
     0px 30px 30px -20px rgba(0,0,0,1), 
@@ -421,8 +421,8 @@ input[type="file"] {
     background: url(/img/rodrigo_background.png);
     background-size:cover;
     background-position:center center;
-    position:relative;
-    top: -1060px; left:-350px; right:0; bottom:0;
+    position:absolute;
+    top:70px; left:-450px; right:0; bottom:0;
     margin:auto;
     box-shadow: 
     0px 30px 30px -20px rgba(0,0,0,1), 
