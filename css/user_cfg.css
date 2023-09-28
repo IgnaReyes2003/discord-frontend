@@ -251,8 +251,8 @@ input[type="file"] {
     background: url(/img/esteban_background.png);
     background-size:cover;
     background-position:center center;
-    position:absolute;
-    top:70px; left:950px; right:0; bottom:0;
+    position:relative;
+    top:10px; left:350px; right:0; bottom:0;
     margin:auto;
     box-shadow: 
     0px 30px 30px -20px rgba(0,0,0,1), 
@@ -333,8 +333,8 @@ input[type="file"] {
     background: url(/img/ignacio_background.jpg);
     background-size:cover;
     background-position:center center;
-    position:absolute;
-    top:70px; left:250px; right:0; bottom:0;
+    position:relative;
+    top:-525px; left:0px; right:0; bottom:0;
     margin:auto;
     box-shadow: 
     0px 30px 30px -20px rgba(0,0,0,1), 
@@ -406,6 +406,12 @@ input[type="file"] {
     }
 }
 
+/**/
+.develop {
+    letter-spacing: 2px;
+    text-align: center;
+}
+
 /*Tarjeta de Rodrigo*/
 #card2 {
     overflow:hidden;
@@ -415,8 +421,8 @@ input[type="file"] {
     background: url(/img/rodrigo_background.png);
     background-size:cover;
     background-position:center center;
-    position:absolute;
-    top:70px; left:-450px; right:0; bottom:0;
+    position:relative;
+    top: -1060px; left:-350px; right:0; bottom:0;
     margin:auto;
     box-shadow: 
     0px 30px 30px -20px rgba(0,0,0,1), 
@@ -486,4 +492,47 @@ input[type="file"] {
     0px 0px 0px 200px rgba(52, 105, 53, 0),
     0px 0px 0px 300px rgba(54, 105, 52, 0);
     }
+}
+
+/*links de los miembros*/
+#profile a {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+}
+
+#card:hover #profile a {
+    opacity: 1;
+}
+
+#profile1 a {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+}
+
+#card1:hover #profile1 a {
+    opacity: 1;
+}
+
+#profile2 a {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+}
+
+#card2:hover #profile2 a {
+    opacity: 1;
 }
