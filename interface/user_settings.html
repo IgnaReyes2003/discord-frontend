@@ -17,25 +17,24 @@
     <div class="content">
         <div class="section" id="miCuentaSection">
             <h1>Mi Cuenta</h1>
-            <div class="profile-pic">
-                <label class="-label" for="file">
-                    <span class="fa-solid fa-image"></span>
-                    <span>Cambiar</span>
-                </label>
-                <input id="file" type="file" onchange="loadFile(event)"/>
-                <img src="/img/default_profile.png" id="output" width="200"/>
-            </div>
+            <form id="miCuentaForm" action="/guardar_cambios" method="POST">
             <div class="user-info">
                 <h2>Editar Información</h2>
-                <input type="text" placeholder="Nombre de usuario">
-                <input type="email" placeholder="Correo electrónico">
-                <input type="password" placeholder="Contraseña">
+                <input type="text" placeholder="Nombre de usuario" name="username">
+                <input type="email" placeholder="Correo electrónico" name="email">
+                <input type="password" placeholder="Nueva Contraseña" name="password">
+                <input type="password" placeholder="Corfirmar Contraseña">
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                <div class="profile-picture-preview">     
+                    <img id="previewImage" src="#" alt="Tu foto de perfil">
+                </div>
                 <p>¿Deseas borrar tu cuenta? <a href="#" class="signup-link">Eliminar Cuenta</a></p>
             </div>
             <div class="buttons">
-                <button id="guardarButton">Guardar</button>
-                <button id="cancelarButton">Cancelar</button>
+                <button type="submit" id="guardarButton">Guardar</button>
+                <button type="button" id="cancelarButton">Cancelar</button>
             </div>
+            </form>
         </div>
         <div class="section" id="acercaDeSection" style="display: none;">
             <div id="card">

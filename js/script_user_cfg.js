@@ -28,12 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/* Script para que el usuario seleccione su foto de perfil*/
-var loadFile = function (event) {
-    var image = document.getElementById("output");
-    image.src = URL.createObjectURL(event.target.files[0]);
-};
-
 /* Selección de elementos de la barra lateral (sidebar) */
 const sidebarLinks = document.querySelectorAll('.sidebar a');
 const sections = document.querySelectorAll('.section');
@@ -57,4 +51,20 @@ sidebarLinks.forEach(link => {
             targetSection.style.display = 'block';
         }
     });
+});
+
+document.getElementById('profilePicture').addEventListener('change', function(e) {
+    const previewImage = document.getElementById('previewImage');
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function() {
+        previewImage.src = reader.result;
+    }
+
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        previewImage.src = ''; // Limpiar la vista previa si no se selecciona ningún archivo
+    }
 });
