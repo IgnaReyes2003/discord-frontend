@@ -43,34 +43,12 @@
         </div>
         
         <div class="main">
-            <div class="register-container"> 
-                <h2>Información Personal</h2>
-                <div class="register-form"> 
-            <div class="section" id="miCuentaSection">
-                <form id="miCuentaForm" action="/guardar_cambios" method="POST">
-                    <div class="user-info">
-                        
-                        <input type="text" placeholder="Nombre de usuario" name="username">
-                        <input type="email" placeholder="Correo electrónico" name="email">
-                        <input type="password" placeholder="Nueva Contraseña" name="password">
-                        <input type="password" placeholder="Confirmar Contraseña">
-                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
-                        <div class="profile-picture-preview">     
-                            <img id="previewImage" src="#" alt="Tu foto de perfil">
-                        </div>
-                        <p>¿Deseas borrar tu cuenta? <a href="#" class="signup-link" style="color: red; font-weight: 500;">Eliminar Cuenta</a></p>
-                    </div>
-                    <div class="buttons" style="display: flex; margin-top: 35px">
-                        <button type="submit" id="guardarButton" style="width: 50%;">Guardar</button>
-                        <button type="button" id="cancelarButton" style="width: 50%;">Cancelar</button>
-                    </div>
-                </form>
-            </div>
+            <div class="register-form"> 
+         <h2>Esta sección se encontrará disponible en la versión 2.0</h2>
         </div>
-    
-    </div></div>
     </div>
-
+    </div>
+    <!-- Modal o caja para que el usuario pueda eliminar su cuenta -->
     <div id="modal" class="modal">
         <span class="close" id="closeModal">&times;</span>
         <div class="modal-content">
@@ -79,10 +57,8 @@
             <p class="confirmation-text">Para confirmar esto, escribe ELIMINAR</p>
             <input type="text" id="confirmInput" placeholder="ELIMINAR">
             <button id="eliminarButton">Eliminar Cuenta</button>
-            <button id="cancelarModalButton">Cancelar</button>
         </div>
     </div>
-
-    <script src="script_user_cfg.js"></script>
+    <script src="/js/script_user_cfg.js"></script>
 </body>
 </html>
