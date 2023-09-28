@@ -165,10 +165,11 @@ body {
     border: none;
     padding: 15px 40px;
     font-size: 16px;
-    margin-right: 8px;
+    margin-right: 0px;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
 }
 
 .buttons button:hover {
@@ -176,6 +177,13 @@ body {
 }
 
 /* Estilo para la opción de cambiar imagen*/
+input[type="file"] {
+    color: rgb(174, 174, 174);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
 .profile-picture-preview {
     width: 150px;
     height: 150px;
@@ -230,5 +238,252 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #444; 
+}
+
+/* Nuestro equipo*/
+/* Tarjeta de Esteban*/
+#card {
+    overflow:hidden;
+    text-align:center;
+    width:320px;
+    height:535px;
+    background: url(/img/esteban_background.png);
+    background-size:cover;
+    background-position:center center;
+    position:absolute;
+    top:70px; left:950px; right:0; bottom:0;
+    margin:auto;
+    box-shadow: 
+    0px 30px 30px -20px rgba(0,0,0,1), 
+    inset 0 0 0 1000px rgba(52, 68, 109, 0.6);
+    transition: all .4s cubic-bezier(.37,.26,.35,1)
+}
+#card:hover { 
+    box-shadow: 
+    0px 30px 30px -20px rgba(0,0,0,.9), 
+    inset 0 0 0 1000px rgba(52, 70, 109, 0.2);
+}
+#card:hover #avatar {
+    animation:none;
+    box-shadow:0;
+    width:200px; 
+    height:200px;
+}
+
+#card:hover #profile{
+    opacity:1;
+    bottom:0;
+}
+#profile {
+    transition: all .5s cubic-bezier(.37,.26,.35,1);
+    opacity:0;
+    position:absolute; 
+    bottom:20px; 
+    width:100%;
+}
+#profile h1 {
+    color:#fff;
+    padding:0;
+    margin:0;
+}
+
+#profile h3 {
+    color:#aaa;
+    padding:0;
+    margin:5px 0 40px 0; 
+    font-size:.9em
+}
+#avatar {
+    transition: all .4s cubic-bezier(.37,.26,.35,1);
+    animation: circleAn 4s infinite;
+    width:150px; height:150px;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    margin:auto;
+    background:url(/img/esteban_santillan.jpg);
+    background-size:cover;
+    background-position:center center;
+    border-radius:100%;
+    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
+}
+@keyframes circleAn {
+    0%   { 
+    box-shadow:
+        0px 30px 30px -25px rgba(0,0,0,0.6), 
+        0px 0px 0px 0px rgb(52, 58, 105), 
+        0px 0px 0px 0px rgba(52, 64, 105, 0.7),
+        0px 0px 0px 0px rgba(52, 63, 105, 0.5);
+    }
+100% { 
+    box-shadow:
+    0px 30px 30px -25px rgba(0,0,0,0.6), 
+    0px 0px 0px 70px rgba(52, 68, 105, 0),
+    0px 0px 0px 200px rgba(52, 65, 105, 0),
+    0px 0px 0px 300px rgba(52, 62, 105, 0);
+    }
+}
+
+/* Tarjeta de Ignacio */
+#card1 {
+    overflow:hidden;
+    text-align:center;
+    width:320px;
+    height:535px;
+    background: url(/img/ignacio_background.jpg);
+    background-size:cover;
+    background-position:center center;
+    position:absolute;
+    top:70px; left:250px; right:0; bottom:0;
+    margin:auto;
+    box-shadow: 
+    0px 30px 30px -20px rgba(0,0,0,1), 
+    inset 0 0 0 1000px rgba(52, 109, 96, 0.6);
+    transition: all .4s cubic-bezier(.37,.26,.35,1)
+}
+#card1:hover { 
+    box-shadow: 
+    0px 30px 30px -20px rgba(0,0,0,.9), 
+    inset 0 0 0 1000px rgba(52, 109, 101, 0.2);
+}
+#card1:hover #avatar1 {
+    animation:none;
+    box-shadow:0;
+    width:200px; 
+    height:200px;
+}
+
+#card1:hover #profile1{
+    opacity:1;
+    bottom:0;
+}
+#profile1 {
+    transition: all .5s cubic-bezier(.37,.26,.35,1);
+    opacity:0;
+    position:absolute; 
+    bottom:20px; 
+    width:100%;
+}
+#profile1 h1 {
+    color:#fff;
+    padding:0;
+    margin:0;
+}
+
+#profile1 h3 {
+    color:#aaa;
+    padding:0;
+    margin:5px 0 40px 0; 
+    font-size:.9em
+}
+#avatar1 {
+    transition: all .4s cubic-bezier(.37,.26,.35,1);
+    animation: circleAn1 4s infinite;
+    width:150px; height:150px;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    margin:auto;
+    background:url(/img/ignacio_reyes.jpg);
+    background-size:cover;
+    background-position:center center;
+    border-radius:100%;
+    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
+}
+@keyframes circleAn1 {
+    0%   { 
+        box-shadow:
+        0px 30px 30px -25px rgba(0,0,0,0.6), 
+        0px 0px 0px 0px rgb(52, 105, 91), 
+        0px 0px 0px 0px rgba(52, 105, 98, 0.7),
+        0px 0px 0px 0px rgba(52, 105, 99, 0.5);
+    }
+100% { 
+    box-shadow:
+    0px 30px 30px -25px rgba(0,0,0,0.6), 
+    0px 0px 0px 70px rgba(52, 105, 104, 0),
+    0px 0px 0px 200px rgba(52, 105, 99, 0),
+    0px 0px 0px 300px rgba(52, 105, 94, 0);
+    }
+}
+
+/*Tarjeta de Rodrigo*/
+#card2 {
+    overflow:hidden;
+    text-align:center;
+    width:320px;
+    height:535px;
+    background: url(/img/rodrigo_background.png);
+    background-size:cover;
+    background-position:center center;
+    position:absolute;
+    top:70px; left:-450px; right:0; bottom:0;
+    margin:auto;
+    box-shadow: 
+    0px 30px 30px -20px rgba(0,0,0,1), 
+    inset 0 0 0 1000px rgba(52, 109, 55, 0.6);
+    transition: all .4s cubic-bezier(.37,.26,.35,1)
+}
+#card2:hover { 
+    box-shadow: 
+    0px 30px 30px -20px rgba(0,0,0,.9), 
+    inset 0 0 0 1000px rgba(57, 109, 52, 0.2);
+}
+#card2:hover #avatar2 {
+    animation:none;
+    box-shadow:0;
+    width:200px; 
+    height:200px;
+}
+
+#card2:hover #profile2{
+    opacity:1;
+    bottom:0;
+}
+#profile2 {
+    transition: all .5s cubic-bezier(.37,.26,.35,1);
+    opacity:0;
+    position:absolute; 
+    bottom:20px; 
+    width:100%;
+}
+#profile2 h1 {
+    color:#fff;
+    padding:0;
+    margin:0;
+}
+
+#profile2 h3 {
+    color:#aaa;
+    padding:0;
+    margin:5px 0 40px 0; 
+    font-size:.9em
+}
+#avatar2 {
+    transition: all .4s cubic-bezier(.37,.26,.35,1);
+    animation: circleAn2 4s infinite;
+    width:150px; height:150px;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    margin:auto;
+    background:url(/img/rodrigo_marquez.jpg);
+    background-size:cover;
+    background-position:center center;
+    border-radius:100%;
+    box-shadow:0px 30px 30px -25px rgba(0,0,0,0.6);
+}
+@keyframes circleAn2 {
+    0%   { 
+    box-shadow:
+        0px 30px 30px -25px rgba(0,0,0,0.6), 
+        0px 0px 0px 0px rgb(54, 105, 52), 
+        0px 0px 0px 0px rgba(56, 105, 52, 0.7),
+        0px 0px 0px 0px rgba(55, 105, 52, 0.5);
+    }
+100% { 
+    box-shadow:
+    0px 30px 30px -25px rgba(0,0,0,0.6), 
+    0px 0px 0px 70px rgba(60, 105, 52, 0),
+    0px 0px 0px 200px rgba(52, 105, 53, 0),
+    0px 0px 0px 300px rgba(54, 105, 52, 0);
+    }
 }
