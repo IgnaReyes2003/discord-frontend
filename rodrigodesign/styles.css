@@ -340,3 +340,24 @@ button:hover {
 #searchable {
 justify-content: space-between;
 }
+
+.person-card img {
+	width: 96px;
+	border-radius: 100px;
+}
+
+.team {
+	padding: 5%;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+h2 {
+	text-align: left !important;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 200;
+}
