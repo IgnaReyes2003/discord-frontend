@@ -38,3 +38,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Validación de datos
+document.querySelector('.formbox.register form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var password = event.target.querySelector('input[type="password"]').value;
+    var birthdate = new Date(event.target.querySelector('input[id="birthdate"]').value);
+    var today = new Date();
+
+    var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
+    if (!password.match(passwordRegex)) {
+        alert('La contraseña debe tener entre 8 y 15 caracteres, incluyendo al menos una minúscula, una mayúscula y un número.');
+        return false;
+    }
+
+    var age = today.getFullYear() - birthdate.getFullYear();
+    var m = today.getMonth() - birthdate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+        age--;
+    }
+
+    if (age < 16) {
+        alert('Debes tener al menos 16 años para registrarte.');
+        return false;
+    }
+
+    // Aquí puedes agregar el código para enviar el formulario
+});
