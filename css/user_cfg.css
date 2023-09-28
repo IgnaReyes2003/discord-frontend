@@ -194,4 +194,21 @@ body {
     background-color: #444;
 }
 
+.sidebar i{
+    margin-right: 6px; 
+}
+
 /*Esitlo para las opciones de "cerrar sesión" e ir a la página de "inicio"*/
+.sidebar .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.logout-button i {
+    margin-right: 6px; 
+}
+
+.home-button i {
+    margin-right: 6px; 
+}

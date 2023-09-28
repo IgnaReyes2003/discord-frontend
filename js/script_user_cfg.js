@@ -70,3 +70,5 @@ document.getElementById('profilePicture').addEventListener('change', function(e)
         previewImage.src = '/img/default_profile.png'; // pondrá una imagen por defecto
     }
 });
+
+// Cerrar sesión

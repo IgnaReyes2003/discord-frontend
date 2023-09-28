@@ -9,10 +9,20 @@
 </head>
 <body>
     <div class="sidebar">
-        <a href="#" class="active" data-section="miCuentaSection">Mi Cuenta</a>
-        <a href="#" data-section="preferenciasSection">Preferencias</a>
-        <a href="#" data-section="acercaDeSection">Acerca de</a>
+        <a href="#" class="active" data-section="miCuentaSection" class="account">
+            <i class="fa-solid fa-user"></i>Mi Cuenta</a>
+        <a href="#" data-section="preferenciasSection" class="preferences">
+            <i class="fa-solid fa-screwdriver-wrench"></i>Preferencias</a>
+        <a href="#" data-section="acercaDeSection" class="about">
+            <i class="fa-solid fa-user-group"></i>Acerca de</a>
         <!-- Aquí añadiré otras secciones de ser necesario -->
+        <div class="bottom">
+            <a href="#" data-section="inicioSection" class="home-button">
+                <i class="fas fa-home"></i>Inicio</a>
+            <a href="#" data-section="cerrarSesionSection" class="logout-button">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar sesión</a>
+        </div>
     </div>
     <div class="content">
         <div class="section" id="miCuentaSection">
@@ -57,6 +67,8 @@
             <button id="eliminarButton">Eliminar Cuenta</button>
         </div>
     </div>
+    <!--Modal para cerrar sesión-->
+    
     <script src="/js/script_user_cfg.js"></script>
 </body>
 </html>
