@@ -1,4 +1,8 @@
 /* Estilos generales */
+
+* {
+	cursor: pointer;
+}
 body {
 	margin: 0px;
 	padding: 0px;
@@ -24,6 +28,7 @@ body {
 	display: flex;
 	flex-direction: column;
     background-color: #000000a3;
+	justify-content: space-between;
 }
 
 .ribbon i {
@@ -41,6 +46,36 @@ body {
 }
 
 
+.ribbon-top {
+	display: flex;
+	flex-direction: column;
+}
+
+.ribbon-bottom {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+
+.mini-profile-pic {
+	display: block;
+    margin: 0 auto;
+	width: 52px;
+	height: 52px;
+	border-radius: 50px;
+	filter: grayscale(100%);
+    transition: filter 0.3s ease;
+	
+}
+
+.mini-profile-pic a {
+	cursor: pointer;
+}
+
+
+.mini-profile-pic:hover {
+    filter: grayscale(0%); /* Change to full color on hover */
+}
 
 
 /* Barra lateral */
