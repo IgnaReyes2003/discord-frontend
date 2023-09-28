@@ -34,23 +34,25 @@ const sections = document.querySelectorAll('.section');
 
 sidebarLinks.forEach(link => {
     link.addEventListener('click', function (event) {
-        event.preventDefault();
+        // Comprobamos si el usuario clickeo "inicio" o "cerrar sesión"
+        if (this.getAttribute('data-section') !== 'inicioSection' && this.getAttribute('data-section') !== 'cerrarSesionSection') {
+            event.preventDefault();
         
         sidebarLinks.forEach(item => item.classList.remove('active'));
-        // Agregar la clase "active"
+        // Agregamos la clase "active"
         this.classList.add('active');
 
-        // Ocultar todo
+        // Esto oculta lo demás
         sections.forEach(section => section.style.display = 'none');
 
         const targetSectionId = this.getAttribute('data-section');
         const targetSection = document.getElementById(targetSectionId);
 
-        // Mostrar la sección seleccionada
+        // Muestra la sección seleccionada
         if (targetSection) {
             targetSection.style.display = 'block';
         }
-    });
+    }});
 });
 
 // Visualización de la foto de perfil ded usuario y controla los eventos
