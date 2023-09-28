@@ -53,6 +53,8 @@ sidebarLinks.forEach(link => {
     });
 });
 
+// Visualización de la foto de perfil ded usuario y controla los eventos
+
 document.getElementById('profilePicture').addEventListener('change', function(e) {
     const previewImage = document.getElementById('previewImage');
     const file = e.target.files[0];
@@ -65,6 +67,6 @@ document.getElementById('profilePicture').addEventListener('change', function(e)
     if (file) {
         reader.readAsDataURL(file);
     } else {
-        previewImage.src = ''; // Limpiar la vista previa si no se selecciona ningún archivo
+        previewImage.src = '/img/default_profile.png'; // pondrá una imagen por defecto
     }
 });
